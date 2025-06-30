@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import PostList from "./PostList";
+import { Post } from "./types";
 
 export default function TopPage() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<Post[]>([]); //Post[]としてPostの配列型を明示
   const [isLoading, setLoading] = useState(true);
 
   // APIでpostsを取得する処理をuseEffectで実行します。
